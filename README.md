@@ -13,13 +13,13 @@
 
 1. Clone this repo to your local machine using:
 
-   ```
+   ```bash
    git clone https://github.com/AyudaEnPython/pyscript-templatte.git
    ```
 
 2. Navigate to the project directory:
 
-   ```
+   ```bash
    cd pyscript-template
    ```
 
@@ -71,12 +71,11 @@ document.querySelector(".nav-btn").addEventListener("click", function () {
 
 ### Include files
 
-```
+```html
 <py-config>
    [[fetch]]
    files = ['main.py']
 </py-config>
-
 ```
 
 This configuration ensures that `main.py` file is fetched and included in your
@@ -84,7 +83,7 @@ PyScript environment.
 
 ### Handle events
 
-```
+```html
 <py-script>
   from pyscript import when, display, document
 
@@ -93,7 +92,6 @@ PyScript environment.
       ...
 
 </py-script>
-
 ```
 
 The `@when` decorator is used to bind functions to events. In this case,
