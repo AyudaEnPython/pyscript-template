@@ -11,32 +11,22 @@
 
 ## Cómo usar esta plantilla
 
-1. Clona este repositorio en tu máquina local usando:
+Clic en el botón `Usar esta plantilla` y después seleccionar `Crear un nuevo repositorio`,
+o clona este repositorio en tu máquina local usando
+`git clone https://github.com/AyudaEnPython/pyscript-template.git`.
 
-   ```bash
-   git clone https://github.com/AyudaEnPython/pyscript-templatte.git
-   ```
+Personaliza el proyecto, reemplaza el favicon, actualiza el archivo de
+configuración con el título y subtítulo que desees, etc.
 
-2. Navega al directorio del proyecto:
+Ejecuta el proyecto:
 
-   ```bash
-   cd pyscript-template
-   ```
-
-3. Personaliza tus configuraciones:
-
-   - Reemplaza el favicon con el tuyo propio.
-   - Actualiza el archivo de configuración con el título y subtítulo que desees.
-
-4. Ejecuta tu proyecto:
-
-   - Si estas usando VSCode, puedes usar la extensión Live Server para ejecutar
-     tu proyecto.
-   - Alternativamente, puedes usar Python para iniciar un servidor local.
-     Ejecuta el siguiente comando en tu directorio del proyecto.
-     ```bash
-     python -m http.server
-     ```
+- Si estas usando VSCode, puedes usar la extensión [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) para ejecutar
+  tu proyecto.
+- Alternativamente, puedes usar Python para iniciar un servidor local.
+  Ejecuta el siguiente comando en tu directorio del proyecto.
+  ```bash
+  python -m http.server
+  ```
 
 ## Configuraciones
 
@@ -72,10 +62,7 @@ document.querySelector(".nav-btn").addEventListener("click", function () {
 ### Incluir archivos
 
 ```html
-<py-config>
-   [[fetch]]
-   files = ['main.py']
-</py-config>
+<py-config> [[fetch]] files = ['main.py'] </py-config>
 ```
 
 Esta configuración asegura que le archivo `main.py` se obtenga e incluya en tu
@@ -85,12 +72,8 @@ entorno PyScript.
 
 ```html
 <py-script>
-  from pyscript import when, display, document
-
-  @when("click", "#btn-id")
-  def click_handler(event):
-      ...
-
+  from pyscript import when, display, document @when("click", "#btn-id") def
+  click_handler(event): ...
 </py-script>
 ```
 

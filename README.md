@@ -11,32 +11,22 @@
 
 ## How to use this template
 
-1. Clone this repo to your local machine using:
+Click on `Use this template` button and then select `Create a new repository`,
+or clone this repo to your local machine using
+`git clone https://github.com/AyudaEnPython/pyscript-templatte.git`.
 
-   ```bash
-   git clone https://github.com/AyudaEnPython/pyscript-templatte.git
-   ```
+Customize the project, replace the favicon, update the setup file with your
+desire title and subtitle, etc.
 
-2. Navigate to the project directory:
+Run the project:
 
-   ```bash
-   cd pyscript-template
-   ```
-
-3. Customize your settings:
-
-   - Replace the favicon with your own.
-   - Update the setup file with your desire title and subtitle.
-
-4. Run your project:
-
-   - If your are using VSCode, you can use the Live Server extension to run your
-     project.
-   - Alternatively, you can use Python to start a local server. Run the
-     following command in your project directory:
-     ```bash
-     python -m http.server
-     ```
+- If your are using VSCode, you can use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension to run your
+  project.
+- Alternatively, you can use Python to start a local server. Run the
+  following command in your project directory:
+  ```bash
+  python -m http.server
+  ```
 
 ## Settings
 
@@ -72,10 +62,7 @@ document.querySelector(".nav-btn").addEventListener("click", function () {
 ### Include files
 
 ```html
-<py-config>
-   [[fetch]]
-   files = ['main.py']
-</py-config>
+<py-config> [[fetch]] files = ['main.py'] </py-config>
 ```
 
 This configuration ensures that `main.py` file is fetched and included in your
@@ -85,12 +72,8 @@ PyScript environment.
 
 ```html
 <py-script>
-  from pyscript import when, display, document
-
-  @when("click", "#btn-id")
-  def click_handler(event):
-      ...
-
+  from pyscript import when, display, document @when("click", "#btn-id") def
+  click_handler(event): ...
 </py-script>
 ```
 
