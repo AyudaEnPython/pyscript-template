@@ -36,7 +36,8 @@
 
       @when("click", "#clear-btn")
       def clear_all(event):
-          document.getElementById("result").value = "</br>"
+          document.getElementById("main-input").value = ""
+          document.getElementById("result").innerHTML = "</br>"
 
       @when("click", "#show-btn")
       def click_handler(event):
