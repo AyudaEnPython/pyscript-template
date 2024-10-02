@@ -9,6 +9,9 @@ function loadConfig() {
   fetch("setup.json")
     .then((response) => response.json())
     .then((data) => {
+      document.querySelector(
+        "title"
+      ).textContent = `AyudaEnPython | ${data.title}`;
       document.getElementById("title").textContent = data.title;
       document.getElementById("subtitle").textContent = data.subtitle;
     })
